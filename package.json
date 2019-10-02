@@ -1,7 +1,7 @@
 {
-  "name": "quote-machine",
+  "name": "markdownpreviewer",
   "version": "0.1.0",
-  "homepage": "https://nikito599.github.io/quote-machine",
+  "homepage": "https://nikito599.github.io/markdownpreviewer",
   "private": true,
   "dependencies": {
     "jquery": "^3.4.1",
