@@ -2,6 +2,7 @@
 
 body {
   background-color: rgba(0, 255, 255, 0.205) !important;
+  padding: 5rem;
 }
 /* 
   EDITOR
@@ -27,7 +28,6 @@ textarea {
   padding: 0 15px;
   font-weight: 700;
   font-size: 1.3rem;
-  margin-top: 5rem;
 }
 
 .modal-dialog {

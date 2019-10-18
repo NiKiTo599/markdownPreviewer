@@ -1,7 +1,7 @@
 {
   "name": "markdownpreviewer",
   "version": "0.1.0",
-  "homepage": "https://nikito599.github.io/markdownpreviewer",
+  "homepage": "https://nikito599.github.io/markdownPreviewer",
   "private": true,
   "dependencies": {
     "jquery": "^3.4.1",

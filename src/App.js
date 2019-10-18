@@ -56,15 +56,20 @@ class App extends React.Component {
   state = {
     placeholder: placeholder,
     classes: ["fa fa-compress"],
-    show: false
+    showEditor: false,
+    showPreviewer: false
   };
 
   onChangePreviwer = newValue => {
     this.setState({ placeholder: newValue });
   };
 
-  changeShowProperty = () => {
-    this.setState({ show: !this.state.show });
+  changeShowPropertyEditor = () => {
+    this.setState({ showEditor: !this.state.showEditor });
+  };
+
+  changeShowPropertyPreviwer = () => {
+    this.setState({ showPreviewer: !this.state.showPreviewer });
   };
 
   render() {
@@ -75,7 +80,7 @@ class App extends React.Component {
             <div className="col-xl-8 col-12">
               <div>
                 <ToolBar
-                  changeShowProperty={this.changeShowProperty}
+                  changeShowProperty={this.changeShowPropertyEditor}
                   name="Editor"
                   icon="fa fa-arrows-alt"
                 />
@@ -84,9 +89,9 @@ class App extends React.Component {
                   markdown={this.state.placeholder}
                   className=""
                 />
-                <ModalWindow show={this.state.show}>
+                <ModalWindow show={this.state.showEditor}>
                   <ToolBar
-                    changeShowProperty={this.changeShowProperty}
+                    changeShowProperty={this.changeShowPropertyEditor}
                     name="Editor"
                     icon="fa fa-compress"
                   />
@@ -101,13 +106,13 @@ class App extends React.Component {
           </div>
           <div className="row justify-content-center align-items-center">
             <div className="col-xl-12 col-12">
-              <ToolBar name="Previewer" icon="fa fa-arrows-alt" changeShowProperty={this.changeShowProperty}/>
+              <ToolBar name="Previewer" icon="fa fa-arrows-alt" changeShowProperty={this.changeShowPropertyPreviwer}/>
               <Previewer markdown={this.state.placeholder} />
-              <ModalWindow show={this.state.show}>
+              <ModalWindow show={this.state.showPreviewer}>
                 <ToolBar
                   name="Previewer"
                   icon="fa fa-compress"
-                  changeShowProperty={this.changeShowProperty}
+                  changeShowProperty={this.changeShowPropertyPreviwer}
                 />
                 <Previewer markdown={this.state.placeholder} />
               </ModalWindow>
